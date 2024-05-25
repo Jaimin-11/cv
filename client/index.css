@@ -1,0 +1,44 @@
+:root {
+    --purple_4: #F1EAFF;
+    --purple_3: #E5D4FF;
+    --purple_2: #DCBFFF;
+    --purple_1: #D0A2F7;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    font-family:  Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background: linear-gradient(180deg, var(--purple_1) 0%, #d0a2f754 64.06%, #d0a2f700 100%);
+}
+
+#NAVBAR{
+    margin: 1rem 0rem 0rem 0rem
+}
+
+#LINKS {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#LINKS > .link-tab{
+    width: 8rem;
+    height: 3.5rem;
+    padding-bottom: 0.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0rem 1rem;
+    background: url(/client/assets/svg/tab-cloud.svg);
+    background-size: cover;
+
+    font-size: 1.5rem;
+    color: var(--purple_1);
+    font-weight: 600;
+}
