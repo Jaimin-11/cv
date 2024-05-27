@@ -1,14 +1,15 @@
-class router {
-    constructor(current_path) {
-        this.current_path = current_path;
+export class router {
+    constructor(home_path) {
+        this.home_path = home_path;
     }
 
-    changeRoute(target_path, element_id) {
-        this.current_path = target_path;
-        this.loadData(this.current_path);
+    changeRoute(element_id) {
+        let target_path = this.home_path + "/" + element_id;
+        window.history.replaceState({}, "Jaimin Patel", target_path)
+        this.loadData(target_path);
     }
 
-    loadData(target_path, element_id) {
+    loadData(element_id) {
         var xhr = typeof XMLHttpRequest != 'undefined' ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
         file_name = element_id.toLowerCase() + ".html";
         xhr.open('get', 'templates/' + file_name, true);
