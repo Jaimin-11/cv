@@ -13,9 +13,11 @@ html{
 
 body{
     background: linear-gradient(180deg, var(--purple_1) 0%, #d0a2f754 64.06%, #d0a2f700 100%);
+    overflow: hidden;
 }
 
 #NAVBAR{
+    z-index: 5;
     margin: 1rem 0rem 0rem 0rem
 }
 
@@ -41,4 +43,8 @@ body{
     font-size: 1.5rem;
     color: var(--purple_1);
     font-weight: 600;
+}
+
+#CONTENT-BOX {
+    z-index: 5;
 }
