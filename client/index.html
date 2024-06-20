@@ -6,33 +6,38 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="templates/home.css">
+    <link rel="stylesheet" href="templates/skills.css">
+    <link rel="stylesheet" href="templates/projects.css">
+    <link rel="stylesheet" href="templates/experience.css">
+    <link rel="stylesheet" href="templates/about_me.css">
 
 </head>
 <body>
     <div id="NAVBAR">
         <div id="LINKS">
-            <div id="HOME" class="link-tab">
+            <div id="HOME" class="link-tab" onclick="tabClicked('HOME')">
                 <span>Home</span>
             </div>
-            <div id="SKILLS" class="link-tab">
+            <div id="SKILLS" class="link-tab" onclick="tabClicked('SKILLS')">
                 <span>Skills</span>
             </div>
-            <div id="PROJECTS" class="link-tab">
+            <div id="PROJECTS" class="link-tab" onclick="tabClicked('PROJECTS')">
                 <span>Projects</span>
             </div>
-            <div id="EXPERIENCE" class="link-tab">
+            <div id="EXPERIENCE" class="link-tab" onclick="tabClicked('EXPERIENCE')">
                 <span>Experience</span>
             </div>
-            <div id="ABOUT" class="link-tab">
+            <div id="ABOUT_ME" class="link-tab" onclick="tabClicked('ABOUT_ME')">
                 <span>About me</span>
             </div>
         </div>
     </div>
-    <button onclick="tabClicked(Hello)">helo</button>
-    <div id="CONTENT">
+    
+    <div id="CONTENT-BOX">
         hello there...
     </div>
     
-    <script type="module" src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
