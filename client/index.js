@@ -14,6 +14,7 @@ class router {
     loadData(element_id) {
         var xhr = typeof XMLHttpRequest != 'undefined' ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
         let file_name = element_id.toLowerCase() + ".html";
+
         xhr.open('get', 'templates/' + file_name, true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
