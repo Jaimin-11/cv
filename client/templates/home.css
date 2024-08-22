@@ -4,12 +4,12 @@
 
 @keyframes bg-cloud-1 {
     0% {left: -25%;}
-    100% {left: 10%;}
+    100% {left: 0%;}
   }
 
 @keyframes bg-cloud-2 {
     0% {left: 100%;}
-    100% {left: 65%;}
+    100% {left: 75%;}
   }
 
   #BG-CLOUD-1 {
@@ -17,7 +17,7 @@
     position: absolute;
     width: 30vw;
     height: 30vh;
-    left: 10%;
+    left: 2%;
     top: 10%;
     filter: blur(1px);
     opacity: 75%;
@@ -34,7 +34,7 @@
     width: 22vw;
     height: 22vh;
     top: 55%;
-    left: 65%;
+    left: 75%;
     filter: blur(1px);
 
     animation-name: bg-cloud-2;
