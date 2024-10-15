@@ -29,8 +29,32 @@ const home_path = window.location.href;
 
 const curr_router = new router(home_path);
 
+function load_css(element_id){
+    var new_link = document.createElement("link");
+    new_link.href = "templates/" + element_id.toLowerCase() + ".css";
+    new_link.type = "text/css";
+    new_link.rel = "stylesheet";
+    new_link.title = "template_css";
+
+    let list_of_link = document.querySelector('[title="template_css"]');
+    console.log(list_of_link);
+
+    if (list_of_link !== null){
+        console.log("hererererere");
+        Array.prototype.slice.call(document.querySelector('[title="template_css"]')).forEach(
+            function(item) {
+                console.log(item);
+              item.remove();
+        });
+    }
+
+    document.getElementsByTagName("head")[0].appendChild(new_link);
+
+}
+
 function tabClicked(element_id){
     curr_router.changeRoute(element_id);
+    load_css(element_id);    
 }
 
 tabClicked("HOME");
