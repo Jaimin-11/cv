@@ -1,6 +1,7 @@
 class router {
     constructor(home_path) {
         this.home_path = home_path;
+        this.current_path = null;
     }
 
     changeRoute(element_id) {
@@ -12,6 +13,12 @@ class router {
     }
 
     loadData(element_id) {
+
+        // if target path element and current path is same then do nothing...
+        if (element_id === this.current_path){
+            return;
+        }
+
         var xhr = typeof XMLHttpRequest != 'undefined' ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
         let file_name = element_id.toLowerCase() + ".html";
 
@@ -22,6 +29,9 @@ class router {
             }
         }
         xhr.send();
+
+        this.current_path = element_id;
+
     }
 }
 
