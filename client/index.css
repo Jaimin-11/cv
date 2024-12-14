@@ -12,7 +12,7 @@ html{
 }
 
 body{
-    background: linear-gradient(180deg, var(--purple_1) 0%, #d0a2f754 64.06%, #d0a2f700 100%);
+    background: linear-gradient(180deg, #D0A2F7 0%, #E0C4F9 64%, #FFFFFF 100%);
     overflow: hidden;
 }
 
@@ -28,10 +28,21 @@ body{
     justify-content: center;
 }
 
-#LINKS > .link-tab{
-    width: 8rem;
-    height: 3.5rem;
-    padding-bottom: 0.4rem;
+.link-tab{
+    width: 15rem;
+    height: 6.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0rem 1rem;
+    background: url(/client/assets/svg/tab-cloud.svg);
+    background-size: cover;
+}
+
+.link-tab-active{
+    width: 15rem;
+    height: 6.2rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -40,11 +51,26 @@ body{
     background: url(/client/assets/svg/tab-cloud.svg);
     background-size: cover;
 
-    font-size: 1.5rem;
+    box-shadow: 0px 20px 5px #00000020;
+    border-radius: 1 rem;
+}
+
+.link-tab-text{
+    position: relative;
+    margin: 0.8rem auto;
+    font-size: 2.2rem;
     color: var(--purple_1);
     font-weight: 600;
 }
 
-#CONTENT-BOX {
-    z-index: 5;
+
+#CONTENT-BOX {    
+    background-color: #FFFFFF50;
+    position: fixed;
+    inset: 0px;
+    width: 65vw;
+    height: 55vh;
+    margin: auto;
+    border-radius: 2rem;
+    box-shadow: 0 20px 15px #00000030;
 }
