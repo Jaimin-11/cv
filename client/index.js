@@ -47,10 +47,8 @@ function load_css(element_id){
     new_link.title = "template_css";
 
     let list_of_link = document.querySelector('[title="template_css"]');
-    console.log(list_of_link);
 
     if (list_of_link !== null){
-        console.log("hererererere");
         Array.prototype.slice.call(document.querySelector('[title="template_css"]')).forEach(
             function(item) {
                 console.log(item);
@@ -62,9 +60,21 @@ function load_css(element_id){
 
 }
 
+function changeActiveTab(element_id){
+    // set all tab class to normal
+    document.getElementById('HOME').classList = ['link-tab'];
+    document.getElementById('WORK').classList = ['link-tab'];
+    document.getElementById('ABOUT_ME').classList = ['link-tab'];
+
+    // set active tab class to active
+    document.getElementById(element_id).classList = ['link-tab-active'];
+
+}
+
 function tabClicked(element_id){
     curr_router.changeRoute(element_id);
-    load_css(element_id);    
+    changeActiveTab(element_id);
+    load_css(element_id);
 }
 
 tabClicked("HOME");
