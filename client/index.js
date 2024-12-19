@@ -36,29 +36,8 @@ class router {
 }
 
 const home_path = window.location.href;
-
 const curr_router = new router(home_path);
-
-function load_css(element_id){
-    var new_link = document.createElement("link");
-    new_link.href = "templates/" + element_id.toLowerCase() + ".css";
-    new_link.type = "text/css";
-    new_link.rel = "stylesheet";
-    new_link.title = "template_css";
-
-    let list_of_link = document.querySelector('[title="template_css"]');
-
-    if (list_of_link !== null){
-        Array.prototype.slice.call(document.querySelector('[title="template_css"]')).forEach(
-            function(item) {
-                console.log(item);
-              item.remove();
-        });
-    }
-
-    document.getElementsByTagName("head")[0].appendChild(new_link);
-
-}
+const tab_css_link = document.getElementById("TAB-CSS-LINK");
 
 function changeActiveTab(element_id){
     // set all tab class to normal
@@ -74,7 +53,7 @@ function changeActiveTab(element_id){
 function tabClicked(element_id){
     curr_router.changeRoute(element_id);
     changeActiveTab(element_id);
-    load_css(element_id);
+    tab_css_link.href = "templates/" + element_id.toLowerCase() + ".css";
 }
 
 tabClicked("HOME");

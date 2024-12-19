@@ -3,16 +3,14 @@
 }
 
 @keyframes bg-cloud-1 {
-    0% {left: -25%;}
-    100% {left: 0%;}
-  }
+    100% {right: -5%;}
+}
 
 @keyframes bg-cloud-2 {
-    0% {left: 100%;}
-    100% {left: 75%;}
-  }
+    100% {left: 0%;}
+}
 
-  #BG-CLOUD-1 {
+#BG-CLOUD-1 {
     z-index: 1;
     position: absolute;
     width: 38vw;

@@ -1,3 +1,36 @@
 .about-me-header{
     color: green;
 }
+
+@keyframes bg-cloud-1 {
+    100% {right: 87%;}
+}
+
+@keyframes bg-cloud-2 {
+    100% {left: 90%;}
+}
+
+
+  #BG-CLOUD-1 {
+    z-index: 1;
+    position: absolute;
+    width: 38vw;
+    height: 38vh;
+    right: 87%;
+    top: 35%;
+
+    animation-name: bg-cloud-1;
+    animation-duration: 1s;
+}
+
+#BG-CLOUD-2 {
+    z-index: 1;
+    position: absolute;
+    width: 22vw;
+    height: 22vh;
+    top: 15%;
+    left: 90%;
+
+    animation-name: bg-cloud-2;
+    animation-duration: 1s;
+}
