@@ -12,11 +12,12 @@
 }
 
 @keyframes bg-cloud-2 {
-    100% {left: var(--bg_2_dest);}
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-12vw, 6vh);}
 }
 
 
-  #BG-CLOUD-1 {
+#BG-CLOUD-1 {
     z-index: 1;
     position: absolute;
     width: 38vw;
@@ -30,11 +31,10 @@
 
 #BG-CLOUD-2 {
     z-index: 1;
-    position: absolute;
+    /* position: absolute; */
     width: 22vw;
     height: 22vh;
-    top: 15%;
-    left: 0%;
+    transform: translate(-12vw, 6vh);
 
     animation-name: bg-cloud-2;
     animation-duration: 1s;
